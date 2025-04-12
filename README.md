@@ -50,3 +50,8 @@ Inicie qualquer conversa com IA colando este trecho:
 - Comunicação entre abas
 - Modularização visual
 - Escalabilidade por fluxo
+
+## 🧾 Registro do Projeto
+
+Consulte o [arquivo de atualização](./atualizacao.md) para ver o histórico completo e a estrutura atual do repositório.
+
