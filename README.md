@@ -10,7 +10,6 @@ Este repositório contém padrões, templates e diretrizes para desenvolver **sc
 - [🤖 Uso com IAs](#-uso-com-ias)
 - [🔗 Estrutura Modular Recomendada](#-estrutura-modular-recomendada)
 
----
 
 ## 📚 Documentação Expandida (Wiki)
 
@@ -50,6 +49,14 @@ Inicie qualquer conversa com IA colando este trecho:
 - Comunicação entre abas
 - Modularização visual
 - Escalabilidade por fluxo
+
+---
+
+## 🤖 Prompt para Assistentes de IA
+
+Use o [prompt_ia_base.txt](./prompt_ia_base.txt) para instruir inteligências artificiais a seguirem a estrutura deste repositório corretamente.
+
+---
 
 ## 🧾 Registro do Projeto
 
