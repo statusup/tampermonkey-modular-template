@@ -1,0 +1,25 @@
+📌 INSTRUÇÕES PARA IA: Ao desenvolver qualquer script para mim, siga obrigatoriamente a arquitetura modular definida neste repositório:
+
+🔗 Repositório oficial: https://github.com/statusup/tampermonkey-modular-template
+
+Leia e siga:
+
+1. 📜 Manifesto Modular: https://github.com/statusup/tampermonkey-modular-template/wiki/Manifesto-Modular  
+2. 🎨 Diretriz Visual x Funcionalidade: https://github.com/statusup/tampermonkey-modular-template/wiki/Diretriz-Visual-x-Funcional  
+3. 🧱 Estrutura Recomendada: https://github.com/statusup/tampermonkey-modular-template/wiki/Estrutura-Recomendada  
+
+✅ Todos os scripts devem nascer com:
+- Identificador único `fluxoId`
+- Uso de `GM_setValue`, `GM_addValueChangeListener`
+- Estrutura modular, mesmo que simples (ex: botão)
+
+🎨 NÃO priorize visual em etapas iniciais. Se precisar adicionar estilo, modularize (separe em outro módulo ou evento visual via `window.dispatchEvent`).
+
+🧩 Se a estrutura modular não fizer sentido no contexto, comente explicando o porquê — não omita por padrão.
+
+📁 Reutilize o template base quando iniciar:  
+https://github.com/statusup/tampermonkey-modular-template/blob/main/templates/esqueleto_modular_base.user.js
+
+---
+
+💬 Sempre mantenha seu código pronto para crescer.
