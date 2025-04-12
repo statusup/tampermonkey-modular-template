@@ -2,6 +2,16 @@
 
 Este repositório contém padrões, templates e diretrizes para desenvolver **scripts escaláveis e modulares** com Tampermonkey.
 
+## 🔗 Índice Rápido
+
+- [📄 Manifestos](#-manifestos)
+- [🧱 Templates](#-templates)
+- [🧪 Exemplos Reais e Simulados](#-exemplos-reais-e-simulados)
+- [🤖 Uso com IAs](#-uso-com-ias)
+- [🔗 Estrutura Modular Recomendada](#-estrutura-modular-recomendada)
+
+---
+
 ## 📄 Manifestos
 
 - [Manifesto Modular](./manifesto/manifesto.md)
@@ -11,13 +21,22 @@ Este repositório contém padrões, templates e diretrizes para desenvolver **sc
 
 - [Script Base Modular](./templates/esqueleto_modular_base.user.js)
 
-## 🤖 Uso com IA
+## 🧪 Exemplos Reais e Simulados
+
+Scripts que demonstram a arquitetura modular aplicada:
+
+- [fluxo-ciclo-validacao.user.js](./exemplos/fluxo-ciclo-validacao.user.js): fluxo entre 3 abas com validação.
+- [modulo-visual-exemplo.user.js](./exemplos/modulo-visual-exemplo.user.js): módulo visual que reage a eventos.
+- [exemplo-simples-com-fluxo.user.js](./exemplos/exemplo-simples-com-fluxo.user.js): botão simples já preparado para expansão.
+
+## 🤖 Uso com IAs
 
 Inicie qualquer conversa com IA colando este trecho:
 
 > Todo script deve seguir arquitetura modular. Mesmo que simples, use GM_setValue, GM_addValueChangeListener, fluxoId. Priorize funcionamento antes do visual. Estilo deve ser modularizado.
 
 ## 🔗 Estrutura Modular Recomendada
+
 - Comunicação entre abas
 - Modularização visual
 - Escalabilidade por fluxo
