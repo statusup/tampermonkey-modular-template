@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tampermonkey Modular Template</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      background: #f4f4f4;
+      color: #333;
+    }
+    nav {
+      min-width: 220px;
+      background: #007bff;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      overflow-y: auto;
+      padding: 30px 20px;
+    }
+    nav h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      margin-left: 240px;
+      padding: 40px 30px;
+      max-width: 900px;
+    }
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+    h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+    p, li {
+      line-height: 1.6;
+    }
+    code {
+      background: #eee;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+    .example-link {
+      display: block;
+      margin: 6px 0;
+      font-weight: bold;
+      color: #007bff;
+      text-decoration: none;
+    }
+    .example-link:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      nav { position: relative; height: auto; width: 100%; }
+      main { margin-left: 0; padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h2>📘 Navegação</h2>
+    <a href="#manifestos">📄 Manifestos</a>
+    <a href="#template">🧱 Template Base</a>
+    <a href="#exemplos">🧪 Exemplos</a>
+    <a href="#ia">🤖 Uso com IA</a>
+  </nav>
+
+  <main>
+    <h1>🧠 Tampermonkey Modular Template</h1>
+
+    <section id="manifestos">
+      <h2>📄 Manifestos</h2>
+      <ul>
+        <li><a class="example-link" href="./manifesto/manifesto.md" target="_blank">Manifesto de Arquitetura Modular</a></li>
+        <li><a class="example-link" href="./diretrizes/visual-funcional.md" target="_blank">Diretriz Visual vs Funcionalidade</a></li>
+      </ul>
+    </section>
+
+    <section id="template">
+      <h2>🧱 Template Base</h2>
+      <p>Use este esqueleto inicial para garantir que seus scripts nasçam preparados para integração modular:</p>
+      <a class="example-link" href="./templates/esqueleto_modular_base.user.js" target="_blank">➡️ esqueleto_modular_base.user.js</a>
+    </section>
+
+    <section id="exemplos">
+      <h2>🧪 Exemplos de Uso</h2>
+      <p>Scripts simulados que demonstram a comunicação entre abas, modularização visual e fluxo de execução:</p>
+      <a class="example-link" href="./exemplos/fluxo-ciclo-validacao.user.js" target="_blank">🔁 fluxo-ciclo-validacao.user.js</a>
+      <a class="example-link" href="./exemplos/modulo-visual-exemplo.user.js" target="_blank">🎨 modulo-visual-exemplo.user.js</a>
+      <a class="example-link" href="./exemplos/exemplo-simples-com-fluxo.user.js" target="_blank">👆 exemplo-simples-com-fluxo.user.js</a>
+    </section>
+
+    <section id="ia">
+      <h2>🤖 Uso com IA</h2>
+      <p>Para orientar outras IAs sobre o padrão deste repositório, compartilhe este link:</p>
+      <code>https://github.com/statusup/tampermonkey-modular-template/tree/main/manifesto/manifesto.md</code>
+    </section>
+  </main>
+</body>
+</html>
