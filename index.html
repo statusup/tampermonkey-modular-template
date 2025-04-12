@@ -58,9 +58,6 @@
       margin-bottom: 10px;
       color: #222;
     }
-    p, li {
-      line-height: 1.6;
-    }
     code {
       background: #eee;
       padding: 2px 5px;
@@ -97,30 +94,48 @@
     <section id="manifestos">
       <h2>📄 Manifestos</h2>
       <ul>
-        <li><a class="example-link" href="./manifesto/manifesto.md" target="_blank">Manifesto de Arquitetura Modular</a></li>
-        <li><a class="example-link" href="./diretrizes/visual-funcional.md" target="_blank">Diretriz Visual vs Funcionalidade</a></li>
+        <li><a id="link-manifesto-md" class="example-link" href="#">Manifesto de Arquitetura Modular (Markdown)</a></li>
+        <li><a id="link-visual-wiki" class="example-link" href="#">Diretriz Visual x Funcionalidade (Wiki)</a></li>
       </ul>
     </section>
 
     <section id="template">
       <h2>🧱 Template Base</h2>
       <p>Use este esqueleto inicial para garantir que seus scripts nasçam preparados para integração modular:</p>
-      <a class="example-link" href="./templates/esqueleto_modular_base.user.js" target="_blank">➡️ esqueleto_modular_base.user.js</a>
+      <a id="link-template-base" class="example-link" href="#">➡️ esqueleto_modular_base.user.js</a>
     </section>
 
     <section id="exemplos">
       <h2>🧪 Exemplos de Uso</h2>
       <p>Scripts simulados que demonstram a comunicação entre abas, modularização visual e fluxo de execução:</p>
-      <a class="example-link" href="./exemplos/fluxo-ciclo-validacao.user.js" target="_blank">🔁 fluxo-ciclo-validacao.user.js</a>
-      <a class="example-link" href="./exemplos/modulo-visual-exemplo.user.js" target="_blank">🎨 modulo-visual-exemplo.user.js</a>
-      <a class="example-link" href="./exemplos/exemplo-simples-com-fluxo.user.js" target="_blank">👆 exemplo-simples-com-fluxo.user.js</a>
+      <a id="link-fluxo-ciclo" class="example-link" href="#">🔁 fluxo-ciclo-validacao.user.js</a>
+      <a id="link-visual-exemplo" class="example-link" href="#">🎨 modulo-visual-exemplo.user.js</a>
+      <a id="link-simples-fluxo" class="example-link" href="#">👆 exemplo-simples-com-fluxo.user.js</a>
     </section>
 
     <section id="ia">
       <h2>🤖 Uso com IA</h2>
       <p>Para orientar outras IAs sobre o padrão deste repositório, compartilhe este link:</p>
-      <code>https://github.com/statusup/tampermonkey-modular-template/tree/main/manifesto/manifesto.md</code>
+      <code id="prompt-ia-link">Carregando...</code>
     </section>
   </main>
+
+  <script>
+    fetch("index.json")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("link-manifesto-md").href = data.manifesto.markdown;
+        document.getElementById("link-visual-wiki").href = data.diretrizes.visual_funcional.wiki;
+        document.getElementById("link-template-base").href = data.estrutura.template_base;
+        document.getElementById("link-fluxo-ciclo").href = data.exemplos.fluxo_ciclo;
+        document.getElementById("link-visual-exemplo").href = data.exemplos.modulo_visual;
+        document.getElementById("link-simples-fluxo").href = data.exemplos.simples_fluxo;
+        document.getElementById("prompt-ia-link").textContent = data.prompt_ia;
+      })
+      .catch(err => {
+        console.error("Erro ao carregar index.json:", err);
+        document.getElementById("prompt-ia-link").textContent = "Erro ao carregar index.json";
+      });
+  </script>
 </body>
 </html>
