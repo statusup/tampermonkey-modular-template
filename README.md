@@ -12,6 +12,16 @@ Este repositório contém padrões, templates e diretrizes para desenvolver **sc
 
 ---
 
+## 📚 Documentação Expandida (Wiki)
+
+Além deste repositório, consulte também as páginas da [Wiki](https://github.com/statusup/tampermonkey-modular-template/wiki):
+
+- [📜 Manifesto Modular](https://github.com/statusup/tampermonkey-modular-template/wiki/Manifesto-Modular)
+- [🎨 Diretriz Visual x Funcional](https://github.com/statusup/tampermonkey-modular-template/wiki/Diretriz-Visual-x-Funcional)
+- [🧪 Guia de Testes](https://github.com/statusup/tampermonkey-modular-template/wiki/Guia-de-Testes)
+- [🧱 Estrutura Recomendada](https://github.com/statusup/tampermonkey-modular-template/wiki/Estrutura-Recomendada)
+
+
 ## 📄 Manifestos
 
 - [Manifesto Modular](./manifesto/manifesto.md)
