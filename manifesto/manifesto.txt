@@ -1,0 +1,32 @@
+Manifesto de Arquitetura Modular para Scripts Tampermonkey
+Versão: 1.0 – Abril 2025
+
+VISÃO:
+Todo script nasce simples, mas deve estar pronto para crescer. Um bom script não apenas resolve o agora — ele antecipa o amanhã.
+
+OBJETIVO:
+Garantir que todos os scripts desenvolvidos sejam projetados desde o início com capacidade de:
+- comunicar-se com outros módulos
+- evoluir sem reescritas profundas
+- ser reaproveitado como peça de um sistema maior
+
+PRINCÍPIOS:
+1. Todo script é um módulo
+2. Comunicação embutida desde o início
+3. Design para integração futura
+4. Escute sempre que possível
+5. Evite decisões finais
+
+ESTRUTURA RECOMENDADA POR SCRIPT:
+- @name bem descritivo
+- @match com domínios específicos
+- fluxoId ou identificador equivalente
+- GM_setValue e GM_addValueChangeListener
+- Comentário de integração
+
+EXEMPLO PRÁTICO:
+const fluxoId = 'fluxo_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+GM_setValue(fluxoId, { status: 'inicial', origem: 'meuScript' });
+GM_addValueChangeListener(fluxoId, (k, o, n) => {
+  if (n.status === 'atualizado') console.log('Novo status:', n);
+});

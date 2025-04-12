@@ -1,0 +1,22 @@
+Diretriz de Estilo Visual vs Funcionalidade para Scripts Modulares
+
+O script deve priorizar funcionalidade clara e objetiva antes de qualquer preocupação estética.
+
+ETAPAS:
+
+1. FUNCIONALIDADE:
+- Estilos mínimos e legíveis
+- Evitar efeitos visuais desnecessários
+
+2. VISUAL MODULARIZADO:
+- Separar visual em outro módulo, comunicar via window.dispatchEvent
+
+3. APRIMORAMENTO VISUAL:
+- Após funcionamento estabelecido, refinar o visual
+
+EXEMPLO:
+window.dispatchEvent(new CustomEvent('exibirAlertaBonito', {
+  detail: { tipo: 'sucesso', texto: 'Tudo certo!' }
+}));
+
+Visual é importante, mas só depois da base estar sólida.
