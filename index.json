@@ -1,0 +1,33 @@
+{
+    "nome": "tampermonkey-modular-template",
+    "descricao": "Template e estrutura para criação de scripts Tampermonkey modulares, escaláveis e IA-friendly.",
+    "repositorio": "https://github.com/statusup/tampermonkey-modular-template",
+    "github_pages": "https://statusup.github.io/tampermonkey-modular-template/",
+    "manifesto": {
+        "markdown": "https://github.com/statusup/tampermonkey-modular-template/blob/main/manifesto/manifesto.md",
+        "txt": "https://github.com/statusup/tampermonkey-modular-template/blob/main/manifesto/manifesto.txt",
+        "json": "https://github.com/statusup/tampermonkey-modular-template/blob/main/manifesto/manifesto.json",
+        "wiki": "https://github.com/statusup/tampermonkey-modular-template/wiki/Manifesto-Modular"
+    },
+    "diretrizes": {
+        "visual_funcional": {
+            "markdown": "https://github.com/statusup/tampermonkey-modular-template/blob/main/diretrizes/visual-funcional.md",
+            "wiki": "https://github.com/statusup/tampermonkey-modular-template/wiki/Diretriz-Visual-x-Funcional"
+        }
+    },
+    "estrutura": {
+        "template_base": "https://github.com/statusup/tampermonkey-modular-template/blob/main/templates/esqueleto_modular_base.user.js",
+        "wiki": "https://github.com/statusup/tampermonkey-modular-template/wiki/Estrutura-Recomendada"
+    },
+    "exemplos": {
+        "fluxo_ciclo": "https://github.com/statusup/tampermonkey-modular-template/blob/main/exemplos/fluxo-ciclo-validacao.user.js",
+        "modulo_visual": "https://github.com/statusup/tampermonkey-modular-template/blob/main/exemplos/modulo-visual-exemplo.user.js",
+        "simples_fluxo": "https://github.com/statusup/tampermonkey-modular-template/blob/main/exemplos/exemplo-simples-com-fluxo.user.js"
+    },
+    "teste": {
+        "arquivo": "https://github.com/statusup/tampermonkey-modular-template/blob/main/TESTS.md",
+        "wiki": "https://github.com/statusup/tampermonkey-modular-template/wiki/Guia-de-Testes"
+    },
+    "prompt_ia": "https://github.com/statusup/tampermonkey-modular-template/blob/main/prompt_ia_base.txt",
+    "atualizacao": "https://github.com/statusup/tampermonkey-modular-template/blob/main/atualizacao.md"
+}
