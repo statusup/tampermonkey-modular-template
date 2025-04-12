@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tampermonkey Modular Template</title>
   <style>
     body {
@@ -74,8 +73,15 @@
       text-decoration: underline;
     }
     @media (max-width: 768px) {
-      nav { position: relative; height: auto; width: 100%; }
-      main { margin-left: 0; padding: 20px; }
+      nav {
+        position: relative;
+        height: auto;
+        width: 100%;
+      }
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -86,6 +92,8 @@
     <a href="#template">🧱 Template Base</a>
     <a href="#exemplos">🧪 Exemplos</a>
     <a href="#ia">🤖 Uso com IA</a>
+    <a href="#wiki">📚 Wiki</a>
+    <a href="#registro">🧾 Registro</a>
   </nav>
 
   <main>
@@ -93,48 +101,74 @@
 
     <section id="manifestos">
       <h2>📄 Manifestos</h2>
+      <p>Documentos que definem os princípios do projeto:</p>
       <ul>
-        <li><a id="link-manifesto-md" class="example-link" href="#">Manifesto de Arquitetura Modular (Markdown)</a></li>
-        <li><a id="link-visual-wiki" class="example-link" href="#">Diretriz Visual x Funcionalidade (Wiki)</a></li>
+        <li><a id="link-manifesto-md" class="example-link" href="./manifesto/manifesto.md" target="_blank">Manifesto de Arquitetura Modular (Markdown)</a></li>
+        <li><a id="link-visual-md" class="example-link" href="./diretrizes/visual-funcional.md" target="_blank">Diretriz Visual x Funcionalidade (Markdown)</a></li>
       </ul>
     </section>
 
     <section id="template">
       <h2>🧱 Template Base</h2>
-      <p>Use este esqueleto inicial para garantir que seus scripts nasçam preparados para integração modular:</p>
-      <a id="link-template-base" class="example-link" href="#">➡️ esqueleto_modular_base.user.js</a>
+      <p>Use este esqueleto inicial para garantir que seus scripts sejam modulares desde o início:</p>
+      <a id="link-template-base" class="example-link" href="./templates/esqueleto_modular_base.user.js" target="_blank">➡️ esqueleto_modular_base.user.js</a>
     </section>
 
     <section id="exemplos">
       <h2>🧪 Exemplos de Uso</h2>
-      <p>Scripts simulados que demonstram a comunicação entre abas, modularização visual e fluxo de execução:</p>
-      <a id="link-fluxo-ciclo" class="example-link" href="#">🔁 fluxo-ciclo-validacao.user.js</a>
-      <a id="link-visual-exemplo" class="example-link" href="#">🎨 modulo-visual-exemplo.user.js</a>
-      <a id="link-simples-fluxo" class="example-link" href="#">👆 exemplo-simples-com-fluxo.user.js</a>
+      <p>Scripts que demonstram comunicação entre abas, modularização visual e fluxos de execução:</p>
+      <a id="link-fluxo-ciclo" class="example-link" href="./exemplos/fluxo-ciclo-validacao.user.js" target="_blank">🔁 fluxo-ciclo-validacao.user.js</a>
+      <a id="link-visual-exemplo" class="example-link" href="./exemplos/modulo-visual-exemplo.user.js" target="_blank">🎨 modulo-visual-exemplo.user.js</a>
+      <a id="link-simples-fluxo" class="example-link" href="./exemplos/exemplo-simples-com-fluxo.user.js" target="_blank">👆 exemplo-simples-com-fluxo.user.js</a>
+      <a id="link-fluxo-social" class="example-link" href="./exemplos/exemplo-fluxo-google-youtube-facebook.user.js" target="_blank">🌐 exemplo-fluxo-google-youtube-facebook.user.js</a>
     </section>
 
     <section id="ia">
       <h2>🤖 Uso com IA</h2>
-      <p>Para orientar outras IAs sobre o padrão deste repositório, compartilhe este link:</p>
-      <code id="prompt-ia-link">Carregando...</code>
+      <p>Para orientar IAs a seguirem o padrão modular, use este prompt ou compartilhe o link abaixo:</p>
+      <code id="prompt-ia-link">https://github.com/statusup/tampermonkey-modular-template/wiki/Manifesto-Modular</code>
+      <p><a id="link-prompt-ia" class="example-link" href="./prompt_ia_base.txt" target="_blank">📜 prompt_ia_base.txt</a></p>
+    </section>
+
+    <section id="wiki">
+      <h2>📚 Documentação Expandida (Wiki)</h2>
+      <p>Consulte a Wiki para mais detalhes:</p>
+      <ul>
+        <li><a class="example-link" href="https://github.com/statusup/tampermonkey-modular-template/wiki/Manifesto-Modular" target="_blank">📜 Manifesto Modular</a></li>
+        <li><a class="example-link" href="https://github.com/statusup/tampermonkey-modular-template/wiki/Diretriz-Visual-x-Funcional" target="_blank">🎨 Diretriz Visual x Funcional</a></li>
+        <li><a class="example-link" href="https://github.com/statusup/tampermonkey-modular-template/wiki/Guia-de-Testes" target="_blank">🧪 Guia de Testes</a></li>
+        <li><a class="example-link" href="https://github.com/statusup/tampermonkey-modular-template/wiki/Estrutura-Recomendada" target="_blank">🧱 Estrutura Recomendada</a></li>
+      </ul>
+    </section>
+
+    <section id="registro">
+      <h2>🧾 Registro do Projeto</h2>
+      <p>Consulte o histórico e a estrutura atual do repositório:</p>
+      <a id="link-registro" class="example-link" href="./atualizacao.md" target="_blank">📝 atualizacao.md</a>
     </section>
   </main>
 
   <script>
+    // Carrega links dinamicamente a partir de index.json, se disponível
     fetch("index.json")
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) throw new Error("index.json não encontrado");
+        return response.json();
+      })
       .then(data => {
-        document.getElementById("link-manifesto-md").href = data.manifesto.markdown;
-        document.getElementById("link-visual-wiki").href = data.diretrizes.visual_funcional.wiki;
-        document.getElementById("link-template-base").href = data.estrutura.template_base;
-        document.getElementById("link-fluxo-ciclo").href = data.exemplos.fluxo_ciclo;
-        document.getElementById("link-visual-exemplo").href = data.exemplos.modulo_visual;
-        document.getElementById("link-simples-fluxo").href = data.exemplos.simples_fluxo;
-        document.getElementById("prompt-ia-link").textContent = data.prompt_ia;
+        document.getElementById("link-manifesto-md").href = data.manifesto?.markdown || "./manifesto/manifesto.md";
+        document.getElementById("link-visual-md").href = data.diretrizes?.visual_funcional?.markdown || "./diretrizes/visual-funcional.md";
+        document.getElementById("link-template-base").href = data.estrutura?.template_base || "./templates/esqueleto_modular_base.user.js";
+        document.getElementById("link-fluxo-ciclo").href = data.exemplos?.fluxo_ciclo || "./exemplos/fluxo-ciclo-validacao.user.js";
+        document.getElementById("link-visual-exemplo").href = data.exemplos?.modulo_visual || "./exemplos/modulo-visual-exemplo.user.js";
+        document.getElementById("link-simples-fluxo").href = data.exemplos?.simples_fluxo || "./exemplos/exemplo-simples-com-fluxo.user.js";
+        document.getElementById("link-fluxo-social").href = data.exemplos?.fluxo_social || "./exemplos/exemplo-fluxo-google-youtube-facebook.user.js";
+        document.getElementById("prompt-ia-link").textContent = data.prompt_ia || "https://github.com/statusup/tampermonkey-modular-template/wiki/Manifesto-Modular";
+        document.getElementById("link-prompt-ia").href = data.prompt_ia_file || "./prompt_ia_base.txt";
+        document.getElementById("link-registro").href = data.registro || "./atualizacao.md";
       })
       .catch(err => {
-        console.error("Erro ao carregar index.json:", err);
-        document.getElementById("prompt-ia-link").textContent = "Erro ao carregar index.json";
+        console.warn("Erro ao carregar index.json, usando links padrão:", err);
       });
   </script>
 </body>
