@@ -1,28 +1,24 @@
 # 🧠 Tampermonkey Modular Template
 
-Este repositório contém **padrões, templates e diretrizes** para desenvolver scripts escaláveis e modulares com Tampermonkey, priorizando modularidade, escalabilidade e manutenção.
+Este repositório contém padrões, templates e diretrizes para desenvolver **scripts escaláveis e modulares** com Tampermonkey.
 
 ## 🔗 Índice Rápido
 
-- [📄 Manifestos](#manifestos)
-- [🧱 Templates](#templates)
-- [🧪 Exemplos Reais e Simulados](#exemplos-reais-e-simulados)
-- [🤖 Uso com IAs](#uso-com-ias)
-- [📚 Documentação Expandida (Wiki)](#documentação-expandida-wiki)
-- [🧾 Registro do Projeto](#registro-do-projeto)
+- [📄 Manifestos](#-manifestos)
+- [🧱 Templates](#-templates)
+- [🧪 Exemplos Reais e Simulados](#-exemplos-reais-e-simulados)
+- [🤖 Uso com IAs](#-uso-com-ias)
+- [📚 Documentação Expandida (Wiki)](#-documentação-expandida-wiki)
+- [🧾 Registro do Projeto](#-registro-do-projeto)
 
 ---
 
 ## 📄 Manifestos
 
-Documentos que definem os princípios do projeto:
-
 - [Manifesto Modular](./manifesto/manifesto.md)
-- [Diretriz Visual x Funcional](./diretrizes/visual-funcional.md)
+- [Diretriz Visual](./diretrizes/visual-funcional.md)
 
 ## 🧱 Templates
-
-Modelos prontos para iniciar seus scripts:
 
 - [Script Base Modular](./templates/esqueleto_modular_base.user.js)
 
@@ -30,22 +26,18 @@ Modelos prontos para iniciar seus scripts:
 
 Scripts que demonstram a arquitetura modular aplicada:
 
-- [fluxo-ciclo-validacao.user.js](./exemplos/fluxo-ciclo-validacao.user.js): Fluxo entre 3 abas com validação.
-- [modulo-visual-exemplo.user.js](./exemplos/modulo-visual-exemplo.user.js): Módulo visual que reage a eventos.
-- [exemplo-simples-com-fluxo.user.js](./exemplos/exemplo-simples-com-fluxo.user.js): Botão simples preparado para expansão.
-- [exemplo-fluxo-google-youtube-facebook.user.js](./exemplos/exemplo-fluxo-google-youtube-facebook.user.js): Fluxo real entre domínios públicos, com validação e comunicação entre abas.
+- [fluxo-ciclo-validacao.user.js](./exemplos/fluxo-ciclo-validacao.user.js): fluxo entre 3 abas com validação.
+- [modulo-visual-exemplo.user.js](./exemplos/modulo-visual-exemplo.user.js): módulo visual que reage a eventos.
+- [exemplo-simples-com-fluxo.user.js](./exemplos/exemplo-simples-com-fluxo.user.js): botão simples já preparado para expansão.
+- [exemplo-fluxo-google-youtube-facebook.user.js](./exemplos/exemplo-fluxo-google-youtube-facebook.user.js): fluxo real funcional entre domínios públicos, validando e confirmando dados via comunicação entre abas.
+- [exemplo-fluxo-com-popups.user.js](./exemplos/exemplo-fluxo-com-popups.user.js): fluxo com dois popups (validação + confirmação), retorna ao script inicial e incrementa contador de ciclos.
+- [exemplo-fluxo-com-redirecionamento.user.js](./exemplos/exemplo-fluxo-com-redirecionamento.user.js): fluxo por redirecionamento sequencial com retorno automático e rastreamento de ciclos.
 
 ## 🤖 Uso com IAs
 
-Para garantir que IAs sigam a estrutura modular, inicie prompts com:
-
-> Todo script deve seguir arquitetura modular. Use GM_setValue, GM_addValueChangeListener e fluxoId, mesmo em scripts simples. Priorize funcionalidade antes do visual. Estilo deve ser modularizado.
-
-Use o arquivo [prompt_ia_base.txt](./prompt_ia_base.txt) para instruções completas.
+Use o [prompt_ia_base.txt](./prompt_ia_base.txt) para instruir inteligências artificiais a seguirem a estrutura deste repositório corretamente.
 
 ## 📚 Documentação Expandida (Wiki)
-
-Consulte a [Wiki](https://github.com/statusup/tampermonkey-modular-template/wiki) para detalhes adicionais:
 
 - [📜 Manifesto Modular](https://github.com/statusup/tampermonkey-modular-template/wiki/Manifesto-Modular)
 - [🎨 Diretriz Visual x Funcional](https://github.com/statusup/tampermonkey-modular-template/wiki/Diretriz-Visual-x-Funcional)
@@ -54,12 +46,4 @@ Consulte a [Wiki](https://github.com/statusup/tampermonkey-modular-template/wiki
 
 ## 🧾 Registro do Projeto
 
-Consulte o [arquivo de atualização](./atualizacao.md) para o histórico completo e a estrutura atual do repositório.
-
----
-
-## Estrutura Modular Recomendada
-
-- **Comunicação entre abas**: Use `GM_setValue` e `GM_addValueChangeListener` para fluxos robustos.
-- **Modularização visual**: Separe estilos em módulos reutilizáveis.
-- **Escalabilidade por fluxo**: Estruture scripts com `fluxoId` para expansão simplificada.
+Consulte o [arquivo de atualização](./atualizacao.md) para ver o histórico completo e a estrutura atual do repositório.
