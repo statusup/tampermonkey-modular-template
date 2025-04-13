@@ -1,36 +1,35 @@
 // ==UserScript==
-// @name         Exemplo: Módulo Visual para Alerta
+// @name         Exemplo: Clique Simples com Fluxo Modular
 // @namespace    http://example.net/
 // @version      1.0
-// @description  Escuta eventos visuais e exibe feedbacks amigáveis
-// @match        *://*/*
+// @description  Um clique simples com estrutura pronta para evoluir
+// @match        https://clicador.exemplo.com/*
+// @grant        GM_setValue
+// @grant        GM_getValue
+// @grant        GM_addValueChangeListener
 // ==/UserScript==
 
 (function() {
     'use strict';
 
-    function criarToast(mensagem, cor = '#28a745') {
-        const toast = document.createElement('div');
-        toast.style.cssText = `
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: ${cor};
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            z-index: 10000;
-            font-family: sans-serif;
-        `;
-        toast.textContent = mensagem;
-        document.body.appendChild(toast);
-        setTimeout(() => toast.remove(), 3000);
-    }
+    const fluxoId = 'fluxo_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    GM_setValue(fluxoId, { status: 'pronto', origem: 'clicador' });
 
-    window.addEventListener('exibirAlertaBonito', (e) => {
-        const { tipo, texto } = e.detail;
-        const cor = tipo === 'erro' ? '#dc3545' : tipo === 'info' ? '#17a2b8' : '#28a745';
-        criarToast(texto, cor);
+    GM_addValueChangeListener(fluxoId, (k, o, n) => {
+        if (n.status === 'executado') {
+            alert('Comando recebido! 🎉');
+        }
     });
+
+    const botao = document.createElement('button');
+    botao.textContent = 'Clique aqui';
+    botao.style.cssText = 'position:fixed;bottom:20px;left:20px;padding:10px;';
+    botao.onclick = () => {
+        GM_setValue(fluxoId, { ...GM_getValue(fluxoId), status: 'executado' });
+        window.dispatchEvent(new CustomEvent('exibirAlertaBonito', {
+            detail: { tipo: 'info', texto: 'Ação enviada!' }
+        }));
+    };
+
+    document.body.appendChild(botao);
 })();
