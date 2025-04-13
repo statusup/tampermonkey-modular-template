@@ -30,8 +30,8 @@ Scripts que demonstram a arquitetura modular aplicada:
 - [modulo-visual-exemplo.user.js](./exemplos/modulo-visual-exemplo.user.js): módulo visual que reage a eventos.
 - [exemplo-simples-com-fluxo.user.js](./exemplos/exemplo-simples-com-fluxo.user.js): botão simples já preparado para expansão.
 - [exemplo-fluxo-google-youtube-facebook.user.js](./exemplos/exemplo-fluxo-google-youtube-facebook.user.js): fluxo real funcional entre domínios públicos, validando e confirmando dados via comunicação entre abas.
-- [exemplo-fluxo-com-popups.user.js](./exemplos/exemplo-fluxo-com-popups.user.js): fluxo com dois popups (validação + confirmação), retorna ao script inicial e incrementa contador de ciclos.
-- [exemplo-fluxo-com-redirecionamento.user.js](./exemplos/exemplo-fluxo-com-redirecionamento.user.js): fluxo por redirecionamento sequencial com retorno automático e rastreamento de ciclos.
+- [exemplo-fluxo-com-popups.user.js](./exemplos/exemplo-fluxo-com-popups.user.js): fluxo cíclico com dois pop-ups de validação/recebimento, com retorno ao início e controle de ciclos.
+- [exemplo-fluxo-com-redirecionamento.user.js](./exemplos/exemplo-fluxo-com-redirecionamento.user.js): fluxo com redirecionamento de uma etapa para outra, encerrando o ciclo com retorno automático ao ponto inicial.
 
 ## 🤖 Uso com IAs
 
