@@ -1,0 +1,1 @@
+// Placeholder: exemplo com redirecionamento (recriar conteúdo após reset)
